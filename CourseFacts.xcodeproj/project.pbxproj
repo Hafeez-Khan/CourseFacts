@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782363EB1F2AADBA000BDD95 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782363EA1F2AADBA000BDD95 /* InfoViewController.swift */; };
+		782363ED1F2AB8ED000BDD95 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782363EC1F2AB8ED000BDD95 /* Fact.swift */; };
 		78F8309D1F26F964006C8D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8309C1F26F964006C8D14 /* AppDelegate.swift */; };
 		78F8309F1F26F964006C8D14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8309E1F26F964006C8D14 /* ViewController.swift */; };
 		78F830A21F26F964006C8D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F830A01F26F964006C8D14 /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		78F830A71F26F964006C8D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F830A51F26F964006C8D14 /* LaunchScreen.storyboard */; };
 		78F830B21F26F964006C8D14 /* CourseFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F830B11F26F964006C8D14 /* CourseFactsTests.swift */; };
 		78F830BD1F26F964006C8D14 /* CourseFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F830BC1F26F964006C8D14 /* CourseFactsUITests.swift */; };
+		78F830CF1F271907006C8D14 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F830CE1F271907006C8D14 /* HistoryViewController.swift */; };
+		78F830D91F281B5F006C8D14 /* MathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F830D81F281B5F006C8D14 /* MathViewController.swift */; };
+		78F830DB1F281C87006C8D14 /* ScienceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F830DA1F281C87006C8D14 /* ScienceTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		782363EA1F2AADBA000BDD95 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		782363EC1F2AB8ED000BDD95 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		78F830991F26F964006C8D14 /* CourseFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F8309C1F26F964006C8D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F8309E1F26F964006C8D14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		78F830B81F26F964006C8D14 /* CourseFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F830BC1F26F964006C8D14 /* CourseFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseFactsUITests.swift; sourceTree = "<group>"; };
 		78F830BE1F26F964006C8D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78F830CE1F271907006C8D14 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		78F830D81F281B5F006C8D14 /* MathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathViewController.swift; sourceTree = "<group>"; };
+		78F830DA1F281C87006C8D14 /* ScienceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScienceTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 				78F830A31F26F964006C8D14 /* Assets.xcassets */,
 				78F830A51F26F964006C8D14 /* LaunchScreen.storyboard */,
 				78F830A81F26F964006C8D14 /* Info.plist */,
+				78F830CE1F271907006C8D14 /* HistoryViewController.swift */,
+				78F830D81F281B5F006C8D14 /* MathViewController.swift */,
+				78F830DA1F281C87006C8D14 /* ScienceTableViewController.swift */,
+				782363EC1F2AB8ED000BDD95 /* Fact.swift */,
+				782363EA1F2AADBA000BDD95 /* InfoViewController.swift */,
 			);
 			path = CourseFacts;
 			sourceTree = "<group>";
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F830DB1F281C87006C8D14 /* ScienceTableViewController.swift in Sources */,
+				78F830D91F281B5F006C8D14 /* MathViewController.swift in Sources */,
+				78F830CF1F271907006C8D14 /* HistoryViewController.swift in Sources */,
 				78F8309F1F26F964006C8D14 /* ViewController.swift in Sources */,
+				782363ED1F2AB8ED000BDD95 /* Fact.swift in Sources */,
+				782363EB1F2AADBA000BDD95 /* InfoViewController.swift in Sources */,
 				78F8309D1F26F964006C8D14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +525,7 @@
 				78F830C31F26F964006C8D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78F830C41F26F964006C8D14 /* Build configuration list for PBXNativeTarget "CourseFactsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				78F830C61F26F964006C8D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78F830C71F26F964006C8D14 /* Build configuration list for PBXNativeTarget "CourseFactsUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				78F830C91F26F964006C8D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
