@@ -10,10 +10,34 @@ import UIKit
 
 class MathViewController: UITableViewController {
     
-    var keyWordsMath = ["Frations","Bedmas","Area of geometric shapes","Perimeter of geometric shapes","Slope"]
-
+    //var keyWordsMath = ["Frations","Bedmas","Area of geometric shapes","Perimeter of geometric shapes","Slope"]
+    var keyWordsMath : [Fact]?
+    var myIndex = 0
+    var data: Fact?
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        keyWordsMath = []
+        
+        let fractions = Fact()
+        fractions.title = "Fractions"
+        fractions.myDescription = "mixed fractions and whole"
+        
+        keyWordsMath?.append(fractions)
+        
+        let slope = Fact ()
+        slope.title = "Finding the slope"
+        slope.myDescription = "m = y2 - y1 / x2 - x1"
+        
+        keyWordsMath?.append(slope)
+        
+        let CTS = Fact ()
+        CTS.title = "Completing the Square"
+        CTS.myDescription = ""
+        
+        keyWordsMath?.append(CTS)
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,11 +45,13 @@ class MathViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
 
     // MARK: - Table view data source
 
@@ -36,21 +62,28 @@ class MathViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
-    }
+        return keyWordsMath!.count
+        }
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
 
         // Configure the cell...
-        cell.backgroundColor = UIColor(red:(244/255),green:(78/255),blue:(81/255), alpha:1.5 )
-        cell.textLabel?.text = keyWordsMath[indexPath.row]
+        cell.backgroundColor = UIColor(red:(244/255),green:(78/255),blue:(81/255), alpha:1.9 )
+        cell.textLabel?.text = keyWordsMath?[indexPath.row].title
 
 
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        self.data = keyWordsMath![indexPath.row]
+        performSegue(withIdentifier: "showInfo", sender: nil)
+        return nil
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,14 +120,21 @@ class MathViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showInfo"{
+            let destination = segue.destination as? InfoViewController
+            destination?.science = data
     }
-    */
+    
 
+}
+    
+    
 }

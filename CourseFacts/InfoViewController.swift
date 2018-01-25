@@ -11,13 +11,17 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
-    //var coolTitle: String = ""
+    @IBOutlet weak var infoLabelTwo : UILabel!
+    
+    //var coolTitle: String = ""    
     var science: Fact?
+    var math: Fact?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         infoLabel.text = science?.myDescription ?? ""
+        infoLabelTwo.text = math?.myDescription ?? ""
         
         // Do any additional setup after loading the view.
     }

@@ -10,10 +10,10 @@ import UIKit
 
 class ScienceTableViewController: UITableViewController {
 
-    //var keyWordsScience = ["Matter", "Energy", "Sustainability and Stewardship", "Human cell", "Plant cell"]
+    //var keyWordsScience = ["Matter", "Energy", "Human cell", "Plant cell"]
     var keyWordsScience: [Fact]?
     var myIndex = 0
-    var sentData: Fact?
+    var data: Fact?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,27 @@ class ScienceTableViewController: UITableViewController {
         
         let matter = Fact()
         matter.title = "Matter"
-        matter.myDescription = "BLAH BLAH"
+        matter.myDescription = "Matter is everywhere"
         
-        keyWordsScience!.append(matter)
+        keyWordsScience?.append(matter)
+        
+        let energy = Fact ()
+        energy.title = "Energy"
+        energy.myDescription = "Energy cant be created or destroyed"
+        
+        keyWordsScience?.append(energy)
+        
+        let humanCell = Fact ()
+        humanCell.title = "Human Cell"
+        humanCell.myDescription = "The human cell consists of a nucleus"
+        
+        keyWordsScience?.append(humanCell)
+        
+        let plantCell = Fact ()
+        plantCell.title = "Plant Cell"
+        plantCell.myDescription = "Plant cell has a cell wall "
+        
+        keyWordsScience?.append(plantCell)
         
         
 
@@ -65,10 +83,12 @@ class ScienceTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        self.sentData = keyWordsScience![indexPath.row]
+        self.data = keyWordsScience![indexPath.row]
         performSegue(withIdentifier: "showInfo", sender: nil)
         return nil
     }
+    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -115,7 +135,7 @@ class ScienceTableViewController: UITableViewController {
 //        
         if segue.identifier == "showInfo" {
            let destination = segue.destination as? InfoViewController
-            destination?.science = sentData
+            destination?.science = data
             
             
         }
